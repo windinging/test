@@ -1,0 +1,105 @@
+@import "../../common/global";
+
+.main {
+  display: flex;
+  height: 100%;
+
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.container {
+  padding: 1rem;
+  @extend .flex-column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  @extend .flex-column;
+}
+
+.row {
+  display: flex;
+  height: 100%;
+}
+
+.card {
+  min-height: 400px;
+  flex: 1;
+}
+
+.actionBar {
+  display: flex;
+  padding: 0 1rem;
+  background: $layout-bg-color;
+  margin-bottom: 0.5rem;
+
+  .searchBar {
+    @extend .flex-row-center;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 0 1.5rem;
+    background: #d8d8d8;
+    border: 1px solid #979797;
+    border-radius: 11px;
+
+    > div {
+      margin-bottom: 0 !important;
+      margin-right: 1rem;
+    }
+  }
+}
+
+.menuSearch {
+  border: none;
+  background: none;
+
+  &:focus {
+    border: 1px solid #b7bbc0;
+    border-radius: 30px;
+    background: #fff !important;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+}
+
+.clientSearchPop {
+  h5 {
+    background: #ffd678;
+    padding: 0.5rem;
+    margin-bottom: 0 !important;
+  }
+
+  .content {
+    padding: 0.5rem;
+    background: #fff1d2;
+  }
+
+  .buttonBar {
+    margin-right: 1rem;
+    text-align: center;
+    padding: 0.5rem 0;
+
+    > button {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.tabWrap {
+  flex: 1;
+
+  > [role="tablist"] {
+    // background: red;
+  }
+
+  > [role="tabpanel"] {
+    flex: 1;
+    background: $layout-bg-color;
+  }
+}
